@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+	<link rel="icon" type="image/x-icon" href="img/Logo.png" />
+
+	<title>Style_Jams</title>
+	<link rel="stylesheet" href="stilos.css" />
+	<link rel="stylesheet" href="carrito.css" />
+	
+
+</head>
+
+<body>
+	<header>
+		<div class="container-navbar">
+			<nav class="navbar container">
+				<div class="container-logo">
+					<img src="img/logo 3.jpeg">
+				</div>
+
+				<div class="menu-container">
+					<input type="checkbox" id="menu-toggle" class="menu-toggle">
+					<label for="menu-toggle" class="menu-icon">
+						<i class="bi bi-list"></i>
+					</label>
+					<ul class="menu">
+						<li><a href="inicio.html">Inicio</a></li>
+						<li><a href="productos.html">Productos</a></li>
+						
+					</ul>
+				</div>
+				<ul class="menuu">
+					<li><a href="inicio.html">Inicio</a></li>
+					<li><a href="productos.html">Productos</a></li>
+					
+				</ul>
+
+
+				<!-- Botón del carrito -->
+				<div class="carrito-notificacion">
+					<button id="boton-carrito">
+						<i class="bi bi-cart-fill"></i>
+						<span class="numero-productos" id="contadorCarrito">0</span>
+					</button>
+				</div>
+
+			</nav>
+		</div>
+	</header>
+
+
+
+	<!--ventana  carrito-->
+	<div class="ventana-emergente" id="ventanaEmergente">
+		<nav>
+			<div class="ventana-emergente-content">
+				<span class="btn-cerrar">&times;</span>
+				<h2>Carrito de compras (En soles)</h2>
+				<ul class="carrito-productos" id="lista-carrito">
+					<li>
+						<span class="nombre">nombre</span>
+						<span class="imagen">imagen</span>
+						<span class="precio">precio</span>
+						<span class="cantidad">cantidad</span>
+					</li>
+				</ul>
+				<h2>Total a pagar: <span id="total-pagar">$0</span></h2>
+				<button type="button" class="btn btn-primary" id="btn-pagar">Finalizar compra</button>
+			</div>
+		</nav>
+	</div>
+
+
+
+	<!--ventana <h2>Carrito de compras</h2>
+			<ul id="lista-carrito" class="carrito-productos"></ul>
+			<h2>Total a pagar: <span id="total-pagar">$0</span></h2>
+			<button type="button" class="btn btn-primary">Comprar sjdhfskjdb</button> carrito-->
+
+
+
+	<!--boton whatsappp -->
+	<a href="https://wa.link/djuber" class="btn-whatsapp" target="_blank">
+		<i class="bi bi-whatsapp" alt="Contactar por whatsapp"></i>
+	</a>
+
+	<main class="main-content">
+
+		<section class="container top-products">
+			<h1 class="heading-1">Productos</h1>
+
+			<!-- detalles image -->
+
+			<div class="modal fade" id="imageGalleryModal" tabindex="-1" aria-labelledby="imageGalleryModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+
+							<h5 class="modal-title" id="imageGalleryModalLabel">Galería de Imágenes</h5>
+
+							<button type="button" class="btn-close btn-close-left" data-dismiss="modal"
+								aria-label="Close"></button>
+
+
+						</div>
+						<div class="modal-body">
+							<div class="image-gallery">
+								<div class="thumbnails">
+									<img src="img/camisa 1 delante.jpeg" alt="Thumbnail 1"
+										data-large="img/camisa 1 delante.jpeg" class="thumbnail" />
+
+									<img src="img/camisa 1 de tras.jpeg" alt="Thumbnail 2"
+										data-large="img/camisa 1 de tras.jpeg" class="thumbnail" />
+
+									<img src="img/camisa 2 delante.jpeg" alt="Thumbnail 3"
+										data-large="img/camisa 2 delante.jpeg" class="thumbnail" />
+
+                                    <img src="img/camisa 2 de tras.jpeg" alt="Thumbnail 3"
+										data-large="img/camisa 2 de tras.jpeg" class="thumbnail" />
+								</div>
+
+
+								<div class="large-image">
+									<img id="main-image" src="img/camisa 1 delante.jpeg" alt="Large Image" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<!-- HTML -->
+
+
+					<div class="container-img">
+						<img src="img/camisa 1 delante.jpeg" alt="snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<h3>Polo oversize 1: color negro</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 1 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="1" data-nombre="Polo oversize 1: color negro" data-precio="60"
+								data-img="img/camisa 1 delante.jpeg"></i>
+						</span>
+						<p class="price">S/60</p>
+						<button class="details-btn">Detalles</button>
+
+					</div>
+
+					<div class="mensaje-emergente" id="mensaje-agregado" style="display: none;">Producto agregado al
+						carrito</div>
+					<div class="mensaje-emergente" id="mensaje-existente" style="display: none;">Producto ya existente
+						en el carrito</div>
+
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 2 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>polo oversize 2: oversize color verde</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 2 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="2" data-nombre="polo oversize 2: oversize color verde" data-precio="60"
+								data-img="img/camisa 2 delante.jpeg"></i>
+						</span>
+						<p class="price">S/.60</p>
+						<button class="details-btn">Detalles</button>
+					</div>
+				</div>
+				<!-- Producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 3 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star"></i>
+						</div>
+						<h3>polo oversize 3: oversize color blanco</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 3 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="3" data-nombre="polo oversize 3: oversize color blanco" data-precio="60"
+								data-img="img/camisa 3 delante.jpeg"></i>
+						</span>
+						<p class="price">S/.60</p>
+						<button class="details-btn">Detalles</button>
+					</div>
+				</div>
+				<!-- Producto 4 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 4 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>polo oversize 4:oversize color blanco </h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 4 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="4" data-nombre="polo oversize 4:oversize color blanco" data-precio="5.60"
+								data-img="img/camisa 4 delante.jpeg"></i>
+						</span>
+						<p class="price">S/.60</p>
+						<button class="details-btn">Detalles</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+		<!--carousel  -->
+
+		<section class="carousel">
+			<div class="slider-container">
+				<div class="slider">
+					<div class="slide">
+						<img src="img/camisa 1 delante.jpeg" alt="Producto 1">
+
+					</div>
+					<div class="slide">
+						<img src="img/camisa 1 de tras.jpeg" alt="Producto 2">
+
+					</div>
+					<div class="slide">
+						<img src="img/camisa 2 delante.jpeg" alt="Producto 3">
+
+					</div>
+					<div class="slide">
+						<img src="img/camisa 2 de tras.jpeg" alt="Producto 4">
+
+					</div>
+					<div class="slide">
+						<img src="img/camisa 3 delante.jpeg" alt="Producto 3">
+
+					</div>
+					<div class="slide">
+						<img src="img/camisa 3 detras.jpeg" alt="Producto 4">
+
+					</div>
+					<div class="slide">
+						<img src="img/camisa 4 delante.jpeg" alt="Producto 3">
+
+					</div>
+					<div class="slide">
+						<img src="img/camisa 4 detras.jpeg" alt="Producto 4">
+
+					</div>
+				</div>
+				<button class="prev-btn">&#10094;</button>
+				<button class="next-btn">&#10095;</button>
+			</div>
+
+
+		</section>
+		<section class="container specials">
+			<h1 class="heading-1">Destacados</h1>
+
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<!-- HTML -->
+
+
+					<div class="container-img">
+						<img src="img/camisa 5 delante.jpeg" alt="snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<h3>polo oversize 5: oversize color negro con estanpado rosado</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 5 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="1" data-nombre="polo oversize 5: oversize color negro con estanpado rosado" data-precio="60"
+								data-img="img/camisa 5 delante.jpeg"></i>
+						</span>
+						<p class="price">S/60</p>
+						<button class="details-btn">Detalles</button>
+
+					</div>
+
+					<div class="mensaje-emergente" id="mensaje-agregado" style="display: none;">Producto agregado al
+						carrito</div>
+					<div class="mensaje-emergente" id="mensaje-existente" style="display: none;">Producto ya existente
+						en el carrito</div>
+
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 6 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>polo oversize 6: oversize con estanpado de carita amarilla feliz</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 6 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="2" data-nombre="polo oversize 6: oversize con estanpado de carita amarilla feliz" data-precio="60"
+								data-img="img/camisa 6 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+						<button class="details-btn">Detalles</button>
+					</div>
+				</div>
+				<!-- Producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 7 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star"></i>
+						</div>
+						<h3>pol o oversize 7: oversize color verde hojita </h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 7 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="3" data-nombre="polo oversize 7: oversize color verde hojita" data-precio="60"
+								data-img="img/camisa 7 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+						<button class="details-btn">Detalles</button>
+					</div>
+				</div>
+				<!-- Producto 4 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 8 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>polo oversize 8: oversize color celeste</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 8 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="4" data-nombre="polo oversize 8: oversize color celeste de talla: (L)" data-precio="60"
+								data-img="img/camisa 8 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+						<button class="details-btn">Detalles</button>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!--  -->
+
+
+	</main>
+
+	<!-- Contenido del footer -->
+	<footer class="footer">
+		<div class="container container-footer">
+			<div class="menu-footer">
+				<div class="my-account">
+					<p class="title-footer">Mi cuenta</p>
+
+					<ul>
+						<li><a href="https://www.facebook.com/style.jams.2023?mibextid=ZbWKwL">Mi cuenta de facebook</a></li>
+
+					</ul>
+				</div>
+
+				<div class="newsletter">
+					<p class="title-footer">sigenos en nuestras redes sociales</p>
+					<div class="social-icons">
+
+						<span class="whatsapp">
+							<a href="https://wa.link/djuber"><i class="bi bi-whatsapp"></i></a>
+						</span>
+						<span class="instagram">
+							<a href="https://instagram.com/style_.jams?igshid=NTc4MTIwNjQ2YQ=="><i class="bi bi-instagram"></i></a>
+						</span>
+						<span class="tiktok">
+							<a href="https://www.tiktok.com/@style_.jams?is_from_webapp=1&sender_device=pc"><i
+									class="bi bi-tiktok"></i></a>
+						</span>
+
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="copyright">
+				<p>
+					Desarrollado por Jams altamirano &copy; 2023
+				</p>
+
+
+			</div>
+		</div>
+	</footer>
+
+	<script src="carrito.js"></script>
+	<script src="script.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+		
+
+
+
+</body>
+
+</html>

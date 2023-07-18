@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="icon" type="image/x-icon" href="img/Logo.png" />
+	<title>productos</title>
+	<link rel="stylesheet" href="stilos.css" />
+	<link rel="stylesheet" href="carrito.css" />
+</head>
+
+<body>
+	<header>
+		<div class="container-navbar">
+			<nav class="navbar container">
+				<div class="container-logo">
+					<img src="img/logo 3.jpeg">
+				</div>
+
+				<div class="menu-container">
+					<input type="checkbox" id="menu-toggle" class="menu-toggle">
+					<label for="menu-toggle" class="menu-icon">
+						<i class="bi bi-list"></i>
+					</label>
+					<ul class="menu">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="productos.html">Productos</a></li>
+						
+					</ul>
+				</div>
+				<ul class="menuu">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="productos.html">Productos</a></li>
+					
+				</ul>
+
+
+
+
+
+				<!-- Botón del carrito -->
+				<div class="carrito-notificacion">
+					<button id="boton-carrito">
+						<i class="bi bi-cart-fill"></i>
+						<span class="numero-productos" id="contadorCarrito">0</span>
+					</button>
+				</div>
+
+			</nav>
+		</div>
+	</header>
+
+
+
+	<!--ventana  carrito-->
+	<div class="ventana-emergente" id="ventanaEmergente">
+		<div class="ventana-emergente-content">
+			<span class="btn-cerrar">&times;</span>
+			<h2>Carrito de compras</h2>
+			<ul id="lista-carrito" class="carrito-productos"></ul>
+			<h2>Total a pagar: <span id="total-pagar">$0</span></h2>
+			<button type="button" class="btn btn-primary" id="btn-pagar">Finalizar Compra</button>
+		</div>
+	</div>
+
+	<div class="video-container">
+
+		<!-- Inserta el código de inserción del video aquí -->
+		<iframe width="100%" height="100%" src="" frameborder="0"
+			allowfullscreen></iframe>
+	</div>
+
+
+
+	<main class="main-content">
+		<section class="container container-features">
+			<div class="card-feature">
+				<i class="bi bi-truck"></i>
+				<div class="feature-content">
+					<span>Envíos</span>
+					<p>En pedido superior a $150</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="bi bi-wallet2"></i>
+				<div class="feature-content">
+					<span>Contrareembolso</span>
+					<p>100% garantía de devolución de dinero</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="bi bi-gift-fill"></i>
+				<div class="feature-content">
+					<span>Tarjeta regalo especial</span>
+					<p>Ofrece bonos especiales con regalo</p>
+				</div>
+			</div>
+			<div class="card-feature">
+				<i class="bi bi-headset"></i>
+				<div class="feature-content">
+					<span>Servicio al cliente 24/7</span>
+					<p>LLámenos 24/7 al 993092123</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container top-products">
+			<h1 class="heading-1">Productos</h1>
+
+			<!-- detalles image -->
+
+			<div class="modal fade" id="imageGalleryModal" tabindex="-1" aria-labelledby="imageGalleryModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+
+							<h5 class="modal-title" id="imageGalleryModalLabel">Galería de Imágenes</h5>
+
+							<button type="button" class="btn-close btn-close-left" data-dismiss="modal"
+								aria-label="Close"></button>
+
+
+						</div>
+						<div class="modal-body">
+							<div class="image-gallery">
+								<div class="thumbnails">
+									<img src="img/jungle snacks crema official.png" alt="Thumbnail 1"
+										data-large="img/jungle snacks crema official.png" class="thumbnail" />
+									<img src="img/bolsa verde oficial.jpeg" alt="Thumbnail 2"
+										data-large="img/bolsa verde oficial.jpeg" class="thumbnail" />
+									<img src="img/presentacion slaider.jpg" alt="Thumbnail 3"
+										data-large="img/presentacion slaider.jpg" class="thumbnail" />
+								</div>
+
+
+								<div class="large-image">
+									<img id="main-image" src="img/jungle snacks crema official.png" alt="Large Image" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<!-- HTML -->
+
+
+					<div class="container-img">
+						<img src="img/camisa 1 de tras.jpeg" alt="snacks" />
+						<img src="img/camisa 1 delante.jpeg" alt="snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<h3>Polo premium oversize color negro, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 1 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="1" data-nombre="Polo premium oversize color negro, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 1 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+
+					<div class="mensaje-emergente" id="mensaje-agregado" style="display: none;">Producto agregado al
+						carrito</div>
+					<div class="mensaje-emergente" id="mensaje-existente" style="display: none;">Producto ya existente
+						en el carrito</div>
+
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 2 de tras.jpeg" alt="Snacks" />
+						<img src="img/camisa 2 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color verde oscuro, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 2 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="2" data-nombre="Polo premium oversize color verde oscuro, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 2 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 3 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 3 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star"></i>
+						</div>
+						<h3>Polo premium oversize color blanco, talla (M)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 3 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="3" data-nombre="Polo premium oversize color blanco, talla (M)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 3 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 4 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 4 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 4 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color blanco, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 4 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="4" data-nombre="Polo premium oversize color blanco, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 4 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="container specials">
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<!-- HTML -->
+					<div class="container-img">
+						<img src="img/camisa 5 detras.jpeg" alt="snacks" />
+						<img src="img/camisa 5 delante.jpeg" alt="snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<h3>Polo premium oversize color negro, talla (S) estanpado color: (Rosado)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 5 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="1" data-nombre="Polo premium oversize color negro, talla (S) estanpado color: (Rosado)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 5 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+
+					</div>
+
+					<div class="mensaje-emergente" id="mensaje-agregado" style="display: none;">Producto agregado al
+						carrito</div>
+					<div class="mensaje-emergente" id="mensaje-existente" style="display: none;">Producto ya existente
+						en el carrito</div>
+
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 6 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 6 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color verde agua, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 6 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="2" data-nombre="Polo premium oversize color verde agua, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 6 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 7 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 7 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star"></i>
+						</div>
+						<h3>Polo premium oversize color verde claro, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 7 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="3" data-nombre="Polo premium oversize color verde claro, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 7 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 4 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 8 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 8 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color celeste, talla (M)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 8 detras.jpeg">
+							<i class="bi bi-cart-fill" data-id="4" data-nombre="Polo premium oversize color celeste, talla (M)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 8 detras.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="container specials">
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<!-- HTML -->
+					<div class="container-img">
+						<img src="img/camisa 9 detras.jpeg" alt="snacks" />
+						<img src="img/camisa 9 delante.jpeg" alt="snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<h3>Polo premium oversize color negro, talla (M)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 9 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="1" data-nombre="Polo premium oversize color negro, talla (M)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 9 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+
+					</div>
+
+					<div class="mensaje-emergente" id="mensaje-agregado" style="display: none;">Producto agregado al
+						carrito</div>
+					<div class="mensaje-emergente" id="mensaje-existente" style="display: none;">Producto ya existente
+						en el carrito</div>
+
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 10 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 10 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color azul petróleo, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 10 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="2" data-nombre="Polo premium oversize color azul petróleo, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 10 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 11 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 11 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star"></i>
+						</div>
+						<h3>Polo premium oversize color rosado liviano, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 11 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="3" data-nombre="Polo premium oversize color rosado liviano, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 11 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 4 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 12 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 12 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color negro, talla (M)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 12 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="4" data-nombre="Polo premium oversize color negro, talla (M)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 12 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		<section class="container specials">
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<!-- HTML -->
+					<div class="container-img">
+						<img src="img/camisa 13 detras.jpeg" alt="snacks" />
+						<img src="img/camisa 13 delante.jpeg" alt="snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<h3>Polo premium oversize color marrón pardo, talla (M)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 13 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="1" data-nombre="Polo premium oversize color marrón pardo, talla (M)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 13 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+
+					</div>
+
+					<div class="mensaje-emergente" id="mensaje-agregado" style="display: none;">Producto agregado al
+						carrito</div>
+					<div class="mensaje-emergente" id="mensaje-existente" style="display: none;">Producto ya existente
+						en el carrito</div>
+
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 14 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 14 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color negro, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 14 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="2" data-nombre="Polo premium oversize color negro, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 14 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 15 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 15 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star"></i>
+						</div>
+						<h3>Polo premium oversize color verde agua fosforescente, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 15 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="3" data-nombre="Polo premium oversize color verde agua fosforescente, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 15 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 4 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 16 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 16 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color morado encendido, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 16 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="4" data-nombre="Polo premium oversize color morado encendido, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 16 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="container specials">
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<!-- HTML -->
+					<div class="container-img">
+						<img src="img/camisa 17 detras.jpeg" alt="snacks" />
+						<img src="img/camisa 17 delante.jpeg" alt="snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<h3>Polo premium oversize color verde, talla (M)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 17 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="1" data-nombre="Polo premium oversize color verde, talla (M)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 17 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+
+					<div class="mensaje-emergente" id="mensaje-agregado" style="display: none;">Producto agregado al
+						carrito</div>
+					<div class="mensaje-emergente" id="mensaje-existente" style="display: none;">Producto ya existente
+						en el carrito</div>
+
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 18 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 18 delante.jpeg" alt="Snacks" />				
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color blanco, talla (M)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 18 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="2" data-nombre="Polo premium oversize color blanco, talla (M)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 18 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 3 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 19 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 19 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star"></i>
+						</div>
+						<h3>Polo premium oversize color beige, talla (S)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 19 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="3" data-nombre="Polo premium oversize color beige, talla (S)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 19 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+				<!-- Producto 4 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 20 detras.jpeg" alt="Snacks" />
+						<img src="img/camisa 20 delante.jpeg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color blanco, talla (L)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 20 delante.jpeg">
+							<i class="bi bi-cart-fill" data-id="4" data-nombre="Polo premium oversize color blanco, talla (L)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 20 delante.jpeg"></i>
+						</span>
+						<p class="price">$60</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container specials">
+			<div class="container-products">
+				<!-- Producto 1 -->
+				<div class="card-product">
+					<!-- HTML -->
+					<div class="container-img">
+						<img src="img/camisa 21 detras.jpg" alt="snacks" />
+						<img src="img/camisa 21 delante.jpg" alt="snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+						</div>
+						<h3>Polo premium oversize color blanco, talla (L)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 21 delante.jpg">
+							<i class="bi bi-cart-fill" data-id="1" data-nombre="Polo premium oversize color blanco, talla (L)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 21 delante.jpg"></i>
+						</span>
+						<p class="price">$60</p>
+					
+
+					</div>
+
+					<div class="mensaje-emergente" id="mensaje-agregado" style="display: none;">Producto agregado al
+						carrito</div>
+					<div class="mensaje-emergente" id="mensaje-existente" style="display: none;">Producto ya existente
+						en el carrito</div>
+
+				</div>
+
+				<!-- Producto 2 -->
+				<div class="card-product">
+					<div class="container-img">
+						<img src="img/camisa 22 detras.jpg" alt="Snacks" />
+						<img src="img/camisa 22 delante.jpg" alt="Snacks" />
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-fill"></i>
+							<i class="bi bi-star-half"></i>
+						</div>
+						<h3>Polo premium oversize color negro, talla (M)
+							60,00 PEN</h3>
+						<span class="add-cart" id="add-to-cart-button" data-img="img/camisa 22 delante.jpg">
+							<i class="bi bi-cart-fill" data-id="2" data-nombre="Polo premium oversize color negro, talla (M)
+							60,00 PEN" data-precio="60"
+								data-img="img/camisa 22 delante.jpg"></i>
+						</span>
+						<p class="price">$60</p>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		
+
+		<!-- Contenido del footer -->
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+
+						<ul>
+							<li><a href="https://www.facebook.com/style.jams.2023?mibextid=ZbWKwL">Mi cuenta de facebook</a></li>
+
+						</ul>
+					</div>
+
+					<div class="newsletter">
+						<p class="title-footer">sigenos en nuestras redes sociales</p>
+						<div class="social-icons">
+
+							<span class="whatsapp">
+								<a href="https://wa.link/djuber"><i class="bi bi-whatsapp"></i></a>
+							</span>
+							<span class="instagram">
+								<a href="https://instagram.com/style_.jams?igshid=NTc4MTIwNjQ2YQ=="><i class="bi bi-instagram"></i></a>
+							</span>
+							<span class="tiktok">
+								<a href="https://www.tiktok.com/@style_.jams?is_from_webapp=1&sender_device=pc"><i
+										class="bi bi-tiktok"></i></a>
+							</span>
+
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="copyright">
+					<p>
+						Desarrollado por Jams altamirano &copy; 2023
+					</p>
+
+				</div>
+			</div>
+		</footer>
+		<script src="carrito.js"></script>
+		<script src="script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+		
+</body>
+
+</html>

@@ -1,0 +1,349 @@
+
+
+
+/*                                                        */
+/* Estilos para la ventana emergente del carrito          */
+
+
+ 
+/* ********************************** */
+  /* Estilos para la ventana emergente del carrito */
+/* ********************************** */
+
+/* Estilos para el contenido de la ventana emergente */
+.ventana-emergente-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para el botón de cerrar la ventana emergente */
+.btn-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+}
+
+.carrito-productos {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.carrito-productos li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #f0ae4b;
+	padding: 10px;
+  }
+
+.carrito-productos button {
+	display: flex;
+	background-color:#c4b493;
+	justify-content: space-between;
+	padding: 5px;
+	cursor: pointer;
+  border-radius: 5px;
+	color: white;
+	border: none;
+
+  }
+  
+  
+  .carrito-productos button:hover {
+	background-color:  #09ff00;
+  }
+  .carrito-productos span {
+	font-family: 'Poppins', sans-serif;
+	font-size: 117%;
+	color: var(--dark-color);
+	font-weight: bold;
+  }
+  
+
+/* Estilos para la ventana emergente */
+.ventana-emergente {
+  display: none;
+  /* Estilos flexibles */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 80vh; /* Establece la altura máxima de la ventana emergente según tus necesidades */
+  overflow-y: auto; /* Permite desplazamiento vertical si la ventana emergente contiene demasiados productos */
+
+}
+/* Estilos para achicar la imagen en la ventana emergente */
+.ventana-emergente-content img {
+  max-width: 100px; /* Ajusta el ancho máximo de la imagen según tus necesidades */
+  height: auto; /* Ajusta la altura automáticamente de forma proporcional */
+}
+
+/* Estilos para los elementos dentro de cada producto en la ventana emergente */
+.ventana-emergente-content li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ventana-emergente-content li img {
+  width: 100px; /* Ajusta el ancho de la imagen según tus necesidades */
+  height: auto;
+  margin-right: 10px;
+}
+
+.ventana-emergente-content li .info-producto {
+  display: flex;
+  flex-direction: column; /* Mostrar elementos verticalmente */
+  align-items: flex-end; /* Alinear elementos a la derecha */
+  
+}
+
+.ventana-emergente-content li .precio-producto,
+.ventana-emergente-content li .btn-eliminar {
+  margin-left: auto; /* Empujar elementos hacia la derecha */
+}
+
+
+
+.ventana-emergente.mostrar {
+  display: block;
+  
+}
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+
+    
+    background-color: rgba(49, 46, 46, 0.4);
+  }
+  
+  .ventana-emergente-content {
+   
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #201c1c;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 1rem;
+    color: #f0ae4b;
+  }
+  /* Estilos para el botón "Finalizar compra" */
+#btn-pagar {
+  background-color: #09ff00;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+#btn-pagar:hover {
+  background-color: #c4b493;
+}
+
+/* Estilos para el elemento span que contiene el total a pagar */
+#total-pagar {
+  font-weight: bold;
+}
+
+  
+  .btn-cerrar {
+    color: #d64d4d;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn-cerrar:hover,
+  .btn-cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #lista-carrito li,
+  #total-pagar li {
+    margin-bottom: 5px;
+  }
+  
+  #lista-carrito li span {
+    font-weight: bold;
+  }
+  
+  #total-pagar {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+
+  .carrito-notificacion {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #boton-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  #boton-carrito:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .bi.bi-cart-fill {
+    font-size: 24px;
+    color: #000000;
+  }
+  
+  .numero-productos {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff0000;
+    border-radius: 50%;
+  }
+
+
+  
+  
+  
+  
+
+
+/* ********************************** */
+/*               carrito            */
+/* ********************************** */
+
+.carrito-notificacion {
+	position: relative;
+	width: 25px;
+	right: 25px;
+  }
+
+  .carrito-notificacion .numero-productos {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	background-color: red;
+	color: white;
+	font-size: 15px;
+	padding: 3px 6px;
+	border-radius: 50%;
+  }
+  .ventana-emergente.show {
+	display: block;
+  }
+  .ventana-emergente {
+    margin-top: 30px;
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .ventana-emergente-content {
+	background-color: #fefefe;
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	position: relative;
+  }
+
+  .ventana-emergente-content ul {
+	list-style-type: none;
+	padding: 0;
+  }
+
+  .ventana-emergente-content li {
+	margin-bottom: 10px;
+  }
+
+  .ventana-emergente-content button {
+	margin-right: 10px;
+  }
+
+  .btn-cerrar {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+  }
+  
+  .imagen-carrito {
+    width: 100px; /* Ajustar el tamaño deseado */
+    height: auto;
+  }
+  
+  .container-products {
+    position: relative;
+  }
+  
+  /* CSS */
+.mensaje-emergente {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #10f181;
+  border: 1px solid #181717;
+  padding: 10px;
+  z-index: 9999;
+  color: rgb(1, 3, 3); /* Cambia el color de letra aquí */
+  display: none;
+}
+
+  
+  
+  
+
+
+  
+  
+  
